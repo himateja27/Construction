@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -32,9 +33,9 @@ const Hero = () => (
           <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-xs font-semibold text-crown-dark transition hover:bg-white sm:px-8 sm:py-4 sm:text-sm">
             Start Your Project <FiArrowRight className="ml-2 sm:ml-3" size={16} />
           </a>
-          <a href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-semibold text-white transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-sm">
+          <Link to="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-semibold text-white transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-sm">
             Explore Projects
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

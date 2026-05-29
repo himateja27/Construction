@@ -9,7 +9,7 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 const Hero = ({ image }) => (
   <section className="relative flex min-h-screen items-center bg-gradient-to-b from-black/60 to-black/40">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-crown-dark/60 via-transparent to-transparent" />
-    <div className="mx-auto flex w-full max-w-7xl items-center gap-12 px-6 py-24">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:gap-12">
       <div className="max-w-2xl">
         <motion.h1 initial={{ y: 24, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }} className="hero-animate text-4xl font-semibold leading-tight text-crown-gold sm:text-5xl">
           Master Azhar — Entrepreneur, Martial Arts Mentor & Founder
@@ -25,8 +25,8 @@ const Hero = ({ image }) => (
         </div>
       </div>
 
-      <div className="ml-auto w-80 flex-shrink-0 rounded-3xl border border-white/5 bg-white/5 p-2 backdrop-blur-md">
-        <motion.img src={image} alt="Master Azhar" loading="lazy" className="h-96 w-full rounded-2xl object-cover shadow-xl" initial={{ scale: 0.98 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
+      <div className="mx-auto w-full max-w-sm flex-shrink-0 rounded-3xl border border-white/5 bg-white/5 p-2 backdrop-blur-md lg:ml-auto">
+        <motion.img src={image} alt="Master Azhar" loading="lazy" className="h-[320px] w-full rounded-2xl object-cover shadow-xl sm:h-96" initial={{ scale: 0.98 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
       </div>
     </div>
   </section>

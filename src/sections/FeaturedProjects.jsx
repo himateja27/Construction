@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -38,9 +39,9 @@ const FeaturedProjects = () => (
               </div>
               <div className="space-y-2 p-5 sm:space-y-3 sm:p-6 md:p-8">
                 <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">{project.description}</p>
-                <a href="/projects" className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-crown-gold transition hover:text-white">
+                <Link to="/projects" className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-crown-gold transition hover:text-white">
                   View case study
-                </a>
+                </Link>
               </div>
             </motion.article>
           </SwiperSlide>
