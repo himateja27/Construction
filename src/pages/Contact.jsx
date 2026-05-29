@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <>
-      <SEO title="Contact | Crown Home Spaces" description="Contact Crown Home Spaces in Hyderabad for luxury interiors, construction, and architectural services." />
+      <SEO title="Contact | Crown Home Spaces" description="Contact Crown Home Spaces in Hyderabad for luxury interiors, turnkey projects, and elite architectural services across Telangana." />
       <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>

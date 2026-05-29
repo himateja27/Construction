@@ -1,5 +1,6 @@
 import { projects } from '../data/projects.js';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 
 const Projects = () => (
@@ -17,19 +18,21 @@ const Projects = () => (
 
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
-            <motion.article key={project.title} whileHover={{ y: -6 }} className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-glow transition hover:border-crown-gold/20 hover:bg-white/10">
-              <div className="relative h-96 overflow-hidden">
-                <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="inline-flex rounded-full bg-crown-gold/15 px-4 py-2 text-xs uppercase tracking-[0.3em] text-crown-gold">{project.category}</span>
-                  <h2 className="mt-4 text-2xl font-semibold">{project.title}</h2>
+            <Link key={project.title} to={`/projects/${project.slug}`} className="group">
+              <motion.article whileHover={{ y: -6 }} className="group block overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-glow transition hover:border-crown-gold/20 hover:bg-white/10">
+                <div className="relative h-96 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <span className="inline-flex rounded-full bg-crown-gold/15 px-4 py-2 text-xs uppercase tracking-[0.3em] text-crown-gold">{project.category}</span>
+                    <h2 className="mt-4 text-2xl font-semibold">{project.title}</h2>
+                  </div>
                 </div>
-              </div>
-              <div className="p-8">
-                <p className="text-sm leading-7 text-crown-beige/90">{project.description}</p>
-              </div>
-            </motion.article>
+                <div className="p-8">
+                  <p className="text-sm leading-7 text-crown-beige/90">{project.description}</p>
+                </div>
+              </motion.article>
+            </Link>
           ))}
         </div>
       </div>

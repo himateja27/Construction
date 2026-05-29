@@ -11,9 +11,9 @@ export const team = [
   {
     id: 'azaruddin',
     name: 'Azaruddin',
-    role: 'Lead Civil Engineer',
+    role: 'Director of Design & Delivery',
     summary:
-      'Experienced civil engineering specialist focused on structural planning, luxury residential projects, commercial infrastructure, and modern construction management with strong commitment to quality and innovation.',
+      'Experienced leader focused on luxury interior delivery, turnkey project coordination, and premium residential execution with a commitment to quality, aesthetics, and strategic craftsmanship.',
     skills: [
       'Structural Planning',
       'Site Execution',

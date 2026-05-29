@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { founderImage } from '../assets/images/founder/index.js';
 
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
+  { label: 'Live Projects', path: '/live-projects' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Careers', path: '/careers' },
   { label: 'Founder', path: '/master-azhar' },
+  { label: 'Combat Academy', path: 'https://fighter-combat-academy.netlify.app/', external: true },
   { label: 'Contact', path: '/contact' }
 ];
 
@@ -30,15 +33,24 @@ const Footer = () => (
           <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl sm:rounded-3xl bg-crown-rich text-sm sm:text-lg font-bold text-crown-gold flex-shrink-0">CH</div>
           <div>
             <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-beige">Crown Home Spaces</p>
-            <p className="mt-1 text-sm sm:text-2xl font-semibold text-white">Premium Construction & Interiors</p>
+            <p className="mt-1 text-sm sm:text-2xl font-semibold text-white">Luxury Interiors & Turnkey Projects</p>
           </div>
         </div>
         <p className="mt-4 max-w-md text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">
-          Delivering cinematic design, strategic engineering, and corporate-grade project delivery across Hyderabad for residential and commercial clients.
+          Delivering cinematic luxury interiors, turnkey project delivery, and premium architectural storytelling across Hyderabad and Telangana.
         </p>
         <div className="mt-6 flex items-center gap-3 text-lg sm:text-2xl text-crown-gold">
           <a href="https://instagram.com/crownhomespaces" target="_blank" rel="noreferrer" aria-label="Instagram"> <FaInstagram /> </a>
           <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" aria-label="WhatsApp"> <FaWhatsapp /> </a>
+        </div>
+        <div className="mt-6 flex items-center gap-4">
+          <div className="flex items-center gap-3 rounded-2xl bg-white/5 p-2">
+            <img src={founderImage} alt="Shaik Azaruddin Founder" title="Work with Shaik Azaruddin" className="h-10 w-10 rounded-lg object-cover" />
+            <div>
+              <p className="text-sm font-semibold text-white">Work with Founder</p>
+              <a href="/master-azhar" className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -47,7 +59,11 @@ const Footer = () => (
         <ul className="mt-4 flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm">
           {navLinks.map((link) => (
             <li key={link.path}>
-              <Link to={link.path} className="transition hover:text-white">{link.label}</Link>
+              {link.external ? (
+                <a href={link.path} target="_blank" rel="noreferrer" className="transition hover:text-white">{link.label}</a>
+              ) : (
+                <Link to={link.path} className="transition hover:text-white">{link.label}</Link>
+              )}
             </li>
           ))}
         </ul>

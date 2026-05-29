@@ -10,9 +10,11 @@ const navItems = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
+  { label: 'Live Projects', path: '/live-projects' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Careers', path: '/careers' },
   { label: 'Founder', path: '/master-azhar' },
+  { label: 'Combat Academy', path: 'https://fighter-combat-academy.netlify.app/', external: true },
   { label: 'Contact', path: '/contact' }
 ];
 
@@ -42,17 +44,29 @@ const Header = () => {
 
         <nav className="hidden items-center gap-3 lg:flex">
           {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                `text-sm uppercase tracking-[0.22em] transition-colors duration-300 ${isActive ? 'text-crown-gold' : 'text-crown-beige hover:text-white'}`
-              }
-              onMouseEnter={() => item.label === 'Services' && setShowMega(true)}
-              onMouseLeave={() => item.label === 'Services' && setShowMega(false)}
-            >
-              {item.label}
-            </NavLink>
+            item.external ? (
+              <a
+                key={item.path}
+                href={item.path}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm uppercase tracking-[0.22em] text-crown-beige transition-colors duration-300 hover:text-white"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  `text-sm uppercase tracking-[0.22em] transition-colors duration-300 ${isActive ? 'text-crown-gold' : 'text-crown-beige hover:text-white'}`
+                }
+                onMouseEnter={() => item.label === 'Services' && setShowMega(true)}
+                onMouseLeave={() => item.label === 'Services' && setShowMega(false)}
+              >
+                {item.label}
+              </NavLink>
+            )
           ))}
         </nav>
 
@@ -87,10 +101,16 @@ const Header = () => {
         <div className="absolute inset-x-0 top-full z-40 bg-crown-dark/95 px-4 pb-6 pt-4 shadow-2xl backdrop-blur-xl lg:hidden sm:px-6">
           <div className="flex flex-col gap-3 sm:gap-4">
             {navItems.map((item) => (
+            item.external ? (
+              <a key={item.label} href={item.path} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="text-sm sm:text-base uppercase tracking-[0.2em] text-crown-beige hover:text-white py-2">
+                {item.label}
+              </a>
+            ) : (
               <NavLink key={item.label} to={item.path} onClick={() => setOpen(false)} className="text-sm sm:text-base uppercase tracking-[0.2em] text-crown-beige hover:text-white py-2">
                 {item.label}
               </NavLink>
-            ))}
+            )
+          ))}
           </div>
           <div className="mt-4 flex flex-col gap-2 border-t border-white/10 pt-4 text-xs sm:text-sm text-crown-beige sm:gap-3 sm:pt-5">
             <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 py-2 sm:py-1">

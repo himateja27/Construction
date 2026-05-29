@@ -4,7 +4,7 @@ import { servicesList } from '../data/services.js';
 
 const Services = () => (
   <>
-    <SEO title="Services | Crown Home Spaces" description="Explore luxury construction, interior design, architectural elevations, project management, and more." />
+    <SEO title="Services | Crown Home Spaces" description="Explore luxury interiors, turnkey projects, architectural elevations, project management, and premium residential delivery across Hyderabad." />
     <section className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">

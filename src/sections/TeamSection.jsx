@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { team } from '../data/team.js';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { founderImage } from '../assets/images/founder/index.js';
 
 const TeamSection = ({ featuredOnly = false }) => {
   const lead = team.find((m) => m.featured) || team[0];
@@ -22,13 +23,7 @@ const TeamSection = ({ featuredOnly = false }) => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <div className="relative flex-shrink-0">
                 <div className="h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-lg sm:rounded-2xl border border-crown-gold bg-crown-rich p-0 flex-shrink-0">
-                  {lead.image ? (
-                    <img src={lead.image} alt={lead.name} className="h-full w-full object-cover" />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-crown-dark text-center text-sm text-crown-beige/90">
-                      Team photo will be added here
-                    </div>
-                  )}
+                  <img src={lead.image || founderImage} alt={lead.name} className="h-full w-full object-cover" />
                 </div>
                 <div className="absolute -right-3 -top-3 rounded-full bg-crown-gold p-2 text-crown-dark shadow-glow">★</div>
               </div>

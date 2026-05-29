@@ -12,21 +12,21 @@ const Hero = ({ image }) => (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:gap-12">
       <div className="max-w-2xl">
         <motion.h1 initial={{ y: 24, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }} className="hero-animate text-4xl font-semibold leading-tight text-crown-gold sm:text-5xl">
-          Master Azhar — Entrepreneur, Martial Arts Mentor & Founder
+          Shaik Azaruddin — Founder of Crown Home Spaces
         </motion.h1>
         <motion.p initial={{ y: 24, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="hero-animate mt-6 max-w-xl text-lg text-crown-beige">
-          Founder of Crown Home Spaces & Fighters Combat Academy — crafting luxury interiors and mentoring champions in Hyderabad.
+          Luxury Interiors & Turnkey Projects Specialist, leading premium residential delivery and martial arts leadership across Hyderabad.
         </motion.p>
 
         <div className="hero-animate mt-8 flex flex-wrap gap-3">
           <Link to="/projects" className="inline-flex items-center gap-2 rounded-full bg-transparent border border-crown-gold px-5 py-3 text-sm text-crown-gold hover:bg-white/5">View Projects</Link>
-          <a href="/contact" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Contact Founder</a>
-          <a href="https://agent-6a14a39b17600fd2fc555860--kbfi.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-5 py-3 text-sm text-crown-beige">Visit Fighters Combat Academy</a>
+          <a href="#founder-story" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Explore Founder Journey</a>
+          <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-5 py-3 text-sm text-crown-beige">Visit Fighters Combat Academy</a>
         </div>
       </div>
 
       <div className="mx-auto w-full max-w-sm flex-shrink-0 rounded-3xl border border-white/5 bg-white/5 p-2 backdrop-blur-md lg:ml-auto">
-        <motion.img src={image} alt="Master Azhar" loading="lazy" className="h-[320px] w-full rounded-2xl object-cover shadow-xl sm:h-96" initial={{ scale: 0.98 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
+        <motion.img src={image} alt="Shaik Azaruddin" loading="lazy" className="h-[320px] w-full rounded-2xl object-cover shadow-xl sm:h-96" initial={{ scale: 0.98 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
       </div>
     </div>
   </section>
@@ -65,7 +65,7 @@ const Gallery = ({ images }) => {
       <h3 className="text-xl font-semibold text-crown-gold">Gallery</h3>
       <div className="mt-6 columns-2 gap-4 sm:columns-3 lg:columns-4">
         {images.map((src, i) => (
-          <motion.img key={i} src={src} onClick={() => { setIdx(i); setOpen(true); }} whileHover={{ scale: 1.03 }} className="mb-4 w-full cursor-pointer rounded-xl object-cover" alt={`Master Azhar ${i + 1}`} loading="lazy" />
+          <motion.img key={i} src={src} onClick={() => { setIdx(i); setOpen(true); }} whileHover={{ scale: 1.03 }} className="mb-4 w-full cursor-pointer rounded-xl object-cover" alt={`Shaik Azaruddin ${i + 1}`} loading="lazy" />
         ))}
       </div>
 
@@ -86,10 +86,22 @@ const MasterAzhar = () => {
     if (value && typeof value === 'object' && 'default' in value) return value.default;
     return typeof value === 'string' ? value : '';
   }).filter(Boolean);
-  const fallbackImage = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%231c140f"/%3E%3Cstop offset="100%25" stop-color="%23b38c66"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="900" fill="url(%23g)"/%3E%3Ctext x="50%25" y="45%25" text-anchor="middle" fill="%23fff" font-family="Inter, sans-serif" font-size="64" font-weight="700"%3EMaster Azhar%3C/text%3E%3Ctext x="50%25" y="57%25" text-anchor="middle" fill="%23f7e0c2" font-family="Inter, sans-serif" font-size="28"%3EFounder Profile%3C/text%3E%3C/svg%3E';
+  const fallbackImage = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%231c140f"/%3E%3Cstop offset="100%25" stop-color="%23b38c66"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="900" fill="url(%23g)"/%3E%3Ctext x="50%25" y="45%25" text-anchor="middle" fill="%23fff" font-family="Inter, sans-serif" font-size="64" font-weight="700"%3EShaik Azaruddin%3C/text%3E%3Ctext x="50%25" y="57%25" text-anchor="middle" fill="%23f7e0c2" font-family="Inter, sans-serif" font-size="28"%3EFounder Profile%3C/text%3E%3C/svg%3E';
   const finalImages = images.length ? images : [fallbackImage, fallbackImage, fallbackImage, fallbackImage, fallbackImage];
 
-  const founderImage = finalImages[0];
+  // Prefer a local page-specific image if present (src/pages/master-azhar/image.png or .svg)
+  let localFound = null;
+  try {
+    localFound = new URL('./master-azhar/image.png', import.meta.url).href;
+  } catch (e) {
+    try {
+      localFound = new URL('./master-azhar/image.svg', import.meta.url).href;
+    } catch (err) {
+      localFound = null;
+    }
+  }
+
+  const founderImage = localFound || finalImages[0];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -126,7 +138,7 @@ const MasterAzhar = () => {
     '@graph': [
       {
         '@type': 'Person',
-        name: 'Master Azhar',
+        name: 'Shaik Azaruddin',
         url: 'https://crownhomespaces.com/master-azhar',
         sameAs: [
           'https://instagram.com/crownhomespaces',
@@ -134,7 +146,7 @@ const MasterAzhar = () => {
         ],
         jobTitle: 'Founder of Crown Home Spaces & Fighters Combat Academy',
         image: founderImage,
-        description: 'Founder of Crown Home Spaces and Fighters Combat Academy, leading luxury interiors, construction, and martial arts mentorship in Hyderabad.'
+        description: 'Shaik Azaruddin leads Crown Home Spaces and Fighters Combat Academy, delivering luxury interiors, turnkey project excellence, and martial arts mentorship in Hyderabad.'
       },
       {
         '@type': 'Organization',
@@ -189,10 +201,10 @@ const MasterAzhar = () => {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Who is Master Azhar?',
+            name: 'Who is Shaik Azaruddin?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Master Azhar is the founder of Crown Home Spaces and Fighters Combat Academy, known for luxury construction and martial arts mentorship in Hyderabad.'
+              text: 'Shaik Azaruddin is the founder of Crown Home Spaces and Fighters Combat Academy, known for luxury interiors, turnkey delivery, and martial arts mentorship in Hyderabad.'
             }
           },
           {
@@ -211,23 +223,23 @@ const MasterAzhar = () => {
   return (
     <div ref={sectionRef} className="relative bg-crown-dark text-white">
       <SEO
-        title="Master Azhar | Founder of Crown Home Spaces & Fighters Combat Academy"
-        description="Master Azhar is the founder of Crown Home Spaces and Fighters Combat Academy in Hyderabad, Telangana. Expert in luxury interiors, construction, martial arts leadership, and entrepreneurship."
+        title="Master Azhar & Shaik Azaruddin | Crown Home Spaces Hyderabad"
+        description="Shaik Azaruddin and Master Azhar lead Crown Home Spaces and Fighters Combat Academy in Hyderabad. Experts in luxury interiors, turnkey projects, leadership, entrepreneurship, and martial arts excellence."
         url="https://crownhomespaces.com/master-azhar"
         image={founderImage}
-        keywords="Master Azhar, Azhar Master, Master Azhar Hyderabad, Fighters Combat Academy, Crown Home Spaces Founder, Azhar Interiors, Azhar Construction Hyderabad"
+        keywords="Shaik Azaruddin, Master Azhar, Crown Home Spaces Founder, Luxury Interiors Hyderabad, Turnkey Projects Hyderabad, Fighters Combat Academy"
       >
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </SEO>
 
       <Hero image={founderImage} />
 
-      <section className="section-animate mx-auto max-w-7xl px-6 py-20">
+      <section className="section-animate mx-auto max-w-7xl px-6 py-20" id="founder-story">
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
-            <h3 className="text-2xl font-semibold text-crown-gold">About Master Azhar</h3>
-            <p className="mt-6 text-crown-beige leading-relaxed">Master Azhar blends cinematic luxury design with disciplined martial arts leadership. As the founder of Crown Home Spaces he leads high-end residential and commercial projects across Hyderabad, delivering Fortune-500 quality execution and a premium aesthetic. He also mentors students at Fighters Combat Academy, nurturing champions through disciplined training and strategic coaching.</p>
-            <p className="mt-4 text-crown-beige leading-relaxed">His entrepreneurship journey is rooted in craftsmanship, design-led construction, and a commitment to excellence — delivering projects that balance opulence with function.</p>
+            <h3 className="text-2xl font-semibold text-crown-gold">About Shaik Azaruddin</h3>
+            <p className="mt-6 text-crown-beige leading-relaxed">Shaik Azaruddin leads Crown Home Spaces as the founder and luxury interiors specialist. His leadership blends cinematic aesthetics, turnkey delivery, and enterprise-grade project execution for Hyderabad’s most discerning clients.</p>
+            <p className="mt-4 text-crown-beige leading-relaxed">He also operates Fighters Combat Academy under the identity of Master Azhar, pairing disciplined martial arts mastery with premium brand storytelling.</p>
           </div>
 
           <div className="flex flex-col gap-6">
@@ -241,10 +253,10 @@ const MasterAzhar = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <Counter value={120} label="Projects Completed" />
-              <Counter value={500} label="Happy Clients" />
-              <Counter value={15} label="Years Experience" />
-              <Counter value={48} label="Team Strength" />
+              <Counter value={30} label="Interior Projects Delivered" />
+              <Counter value={11} label="Years Experience" />
+              <Counter value={30} label="Telangana Areas Served" />
+              <Counter value={48} label="Leadership Team" />
             </div>
           </div>
         </div>
@@ -253,10 +265,10 @@ const MasterAzhar = () => {
       <section className="section-animate mx-auto max-w-7xl px-6 py-12">
         <h3 className="text-2xl font-semibold text-crown-gold">Fighters Combat Academy</h3>
         <div className="mt-6 flex flex-col gap-6 sm:flex-row">
-          <div className="flex-1 rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-md">
-            <h4 className="text-lg font-semibold">Train with champions</h4>
-            <p className="mt-3 text-crown-beige">A premium martial arts academy led by Master Azhar. Professional coaching, disciplined training, and elite facilities.</p>
-            <a href="https://agent-6a14a39b17600fd2fc555860--kbfi.netlify.app/" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Visit Fighters Combat Academy</a>
+          <div className="flex-1 rounded-3xl border border-white/5 bg-gradient-to-br from-black/30 to-white/5 p-6 backdrop-blur-md">
+            <h4 className="text-lg font-semibold">Elite combat training</h4>
+            <p className="mt-3 text-crown-beige">The leadership brand behind Crown Home Spaces, Fighters Combat Academy fuses premium discipline with championship-level coaching in Hyderabad.</p>
+            <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Visit Fighters Combat Academy</a>
           </div>
 
           <div className="w-full max-w-sm flex-shrink-0">

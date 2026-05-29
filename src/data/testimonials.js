@@ -1,9 +1,9 @@
 export const testimonials = [
   {
     name: 'Azaruddin',
-    title: 'Lead Civil Engineer',
+    title: 'Director of Design & Delivery',
     quote:
-      'Azaruddin brings exceptional engineering expertise and professional execution to every project. His attention to structural quality, planning precision, and modern construction standards helps deliver premium spaces with trust and perfection.',
+      'Azaruddin brings premium delivery discipline and luxury project oversight to every space. His attention to quality, client experience, and polished execution helps create confident, cinematic environments.',
     company: 'Crown Home Spaces',
     image: 'https://images.unsplash.com/photo-1603415526960-f7e0328c80d6?auto=format&fit=crop&w=800&q=80',
     featured: true

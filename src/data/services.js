@@ -1,14 +1,14 @@
 export const servicesMenu = [
   { title: 'Luxury Interior Design', description: 'Curated residential and commercial interiors with premium materials and tailored aesthetics.' },
   { title: 'Residential Construction', description: 'Turnkey construction with disciplined planning, quality execution, and sustainable systems.' },
-  { title: 'Commercial Construction', description: 'Corporate spaces, retail flagship builds, and hospitality fit-outs delivered on budget.' },
-  { title: 'Architectural Elevations', description: 'Strategic façades, modern elevations, and corporate brand expressions.' },
+  { title: 'Turnkey Projects', description: 'End-to-end delivery for luxury homes, villas, and premium residences.' },
+  { title: 'Architectural Elevations', description: 'Strategic façades, modern elevations, and high-end architectural expressions.' },
   { title: '3D Floor Plans', description: 'Immersive visual planning for homeowners, developers, and architects.' },
   { title: 'Landscaping', description: 'Luxury outdoor experiences with premium planting design and hardscape detail.' },
   { title: 'MEP Drawings', description: 'Mechanical, electrical, and plumbing coordination for high-performance buildings.' },
-  { title: 'Civil Engineering', description: 'Structural planning, foundation design, and compliant construction solutions.' },
-  { title: 'Renovation Services', description: 'Modern adaptive reuse, upscale renovations, and strategic property upgrades.' },
-  { title: 'Smart Home Design', description: 'Connected living spaces with automation, lighting, and integrated technology.' }
+  { title: 'Project Management', description: 'Premium project coordination, planning, and execution for elite builds.' },
+  { title: 'Renovation Services', description: 'High-end renovation delivery with elegant finishes and modern upgrades.' },
+  { title: 'Smart Home Design', description: 'Intelligent living experiences through connected technology and luxury comfort.' }
 ];
 
 export const servicesList = [
@@ -23,9 +23,9 @@ export const servicesList = [
     icon: '⌂'
   },
   {
-    title: 'Commercial Construction',
-    description: 'Strategic project execution for offices, retail, and large-scale developments.',
-    icon: '⚒'
+    title: 'Turnkey Projects',
+    description: 'Full turnkey delivery for high-end homes, brand spaces, and luxury properties.',
+    icon: '✧'
   },
   {
     title: 'Architectural Elevations',
@@ -48,9 +48,9 @@ export const servicesList = [
     icon: '⚡'
   },
   {
-    title: 'Civil Engineering',
-    description: 'Trusted civil expertise from foundation design to ground improvement works.',
-    icon: '⛰'
+    title: 'Project Management',
+    description: 'Premium project coordination for elite builds, budgets, and timelines.',
+    icon: '⚙'
   },
   {
     title: 'Renovation Services',

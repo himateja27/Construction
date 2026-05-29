@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
+import { businessStreetAddress, businessLocality, businessRegion, businessCountry, googleMapsUrl } from '../constants/location.js';
 
 const defaultMeta = {
-  title: 'Crown Home Spaces | Luxury Interiors & Construction',
-  description: 'Crown Home Spaces is a premium construction and interior design company in Hyderabad delivering luxury residential and commercial projects.',
+  title: 'Crown Home Spaces | Luxury Interiors & Turnkey Projects in Hyderabad',
+  description: `Crown Home Spaces is a premium luxury interiors and turnkey projects company based at ${businessStreetAddress}, delivering elite architecture, residential construction, and premium interior experiences.`,
   url: 'https://crownhomespaces.com',
-  image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
-  keywords: 'construction company Hyderabad, interior designers Hyderabad, luxury interiors, architectural elevations, civil engineering'
+  image: 'https://crownhomespaces.com/og-image.jpg',
+  keywords: 'Luxury Interiors Hyderabad, Best Interior Designers Hyderabad, Turnkey Projects Hyderabad, Premium Interiors Hyderabad, Villa Interior Designers Hyderabad, Crown Home Spaces Hyderabad'
 };
 
 const SEO = ({ title, description, url, image, keywords, children }) => {
@@ -19,31 +20,82 @@ const SEO = ({ title, description, url, image, keywords, children }) => {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ConstructionBusiness',
-    name: 'Crown Home Spaces',
-    url: meta.url,
-    logo: 'https://crownhomespaces.com/logo.png',
-    telephone: '+919553041347',
-    email: 'crownhomespaces@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Hyderabad, Telangana',
-      addressLocality: 'Hyderabad',
-      addressRegion: 'Telangana',
-      addressCountry: 'India'
-    },
-    priceRange: '₹₹₹',
-    description: meta.description,
-    sameAs: [
-      'https://instagram.com/crownhomespaces',
-      'https://maps.google.com/?q=Hyderabad,Telangana,India'
-    ],
-    contactPoint: [
+    '@graph': [
       {
-        '@type': 'ContactPoint',
+        '@type': 'WebSite',
+        name: 'Crown Home Spaces',
+        url: meta.url,
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${meta.url}/?s={search_term_string}`,
+          'query-input': 'required name=search_term_string'
+        }
+      },
+      {
+        '@type': 'Organization',
+        name: 'Crown Home Spaces',
+        url: meta.url,
+        logo: 'https://crownhomespaces.com/logo.png',
+        sameAs: [
+          'https://instagram.com/crownhomespaces',
+          'https://wa.me/919553041347',
+          googleMapsUrl
+        ],
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: '+91 9553041347',
+            contactType: 'customer service',
+            areaServed: 'Telangana'
+          }
+        ]
+      },
+      {
+        '@type': 'LocalBusiness',
+        name: 'Crown Home Spaces',
+        image: meta.image,
         telephone: '+91 9553041347',
-        contactType: 'customer service',
-        areaServed: 'IN'
+        email: 'crownhomespaces@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: businessStreetAddress,
+          addressLocality: businessLocality,
+          addressRegion: businessRegion,
+          addressCountry: businessCountry
+        },
+        priceRange: '₹₹₹',
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '17.3850',
+          longitude: '78.4867'
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            opens: '09:00',
+            closes: '19:00'
+          }
+        ],
+        serviceType: 'Luxury Interiors & Turnkey Projects'
+      },
+      {
+        '@type': 'ProfessionalService',
+        name: 'Crown Home Spaces',
+        url: meta.url,
+        description: meta.description,
+        areaServed: 'Hyderabad, Telangana, India'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://crownhomespaces.com/'
+          }
+        ]
       }
     ]
   };
