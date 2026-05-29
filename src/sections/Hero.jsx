@@ -56,7 +56,7 @@ const Hero = () => (
           <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-[28px] border border-white/10 bg-gradient-to-r from-black/70 via-black/50 to-transparent p-4 text-white shadow-xl">
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Founder Portrait</p>
             <p className="mt-2 text-lg font-semibold">Shaik Azaruddin</p>
-            <p className="mt-1 text-sm text-crown-beige/90">Luxury Interiors | Turnkey Projects | Hyderabad</p>
+            <p className="mt-1 text-sm text-crown-beige/90">CIVIL ENGINEER | CROWN HOME SPACES | TELANGANA </p>
           </div>
         </motion.div>
       </div>

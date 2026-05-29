@@ -38,7 +38,7 @@ const Home = () => (
               <div className="absolute inset-x-4 bottom-4 rounded-[28px] border border-white/10 bg-black/70 p-5 text-white backdrop-blur-md">
                 <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Founder Portrait</p>
                 <p className="mt-2 text-xl font-semibold">Shaik Azaruddin</p>
-                <p className="mt-1 text-sm text-crown-beige/90">CIVIL ENGINEER | CROWN HOME SPACES | Hyderabad</p>
+                <p className="mt-1 text-sm text-crown-beige/90">CIVIL ENGINEER | CROWN HOME SPACES | TELANGANA </p>
               </div>
             </motion.div>
           </div>
@@ -68,7 +68,7 @@ const Home = () => (
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-4 md:gap-6">
               <div className="rounded-2xl sm:rounded-3xl bg-crown-rich/40 px-4 py-3 sm:px-6 sm:py-4 md:px-6 md:py-4">
-                <p className="text-lg sm:text-2xl font-semibold text-white">50+</p>
+                <p className="text-lg sm:text-2xl font-semibold text-white">30+</p>
                 <p className="mt-1 text-xs sm:text-sm text-crown-beige/90">Projects Delivered</p>
               </div>
               <div className="rounded-2xl sm:rounded-3xl bg-crown-rich/40 px-4 py-3 sm:px-6 sm:py-4 md:px-6 md:py-4">

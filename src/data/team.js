@@ -25,8 +25,8 @@ export const team = [
       'Quality Assurance',
       'Interior & Exterior Coordination'
     ],
-    experience: '5+ Years',
-    projects: '50+ Successful Projects',
+    experience: '11+ Years',
+    projects: '30+ Successful Projects',
     specialization: 'Luxury Homes & Commercial Infrastructure',
     image: teamImages['azaruddin.jpg'] || '',
     socials: {
