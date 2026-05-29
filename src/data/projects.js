@@ -43,7 +43,7 @@ export const projects = [
   },
   {
     title: '# 18',
-    slug: 'h18',
+    slug: 'h 18',
     folder: '# 18',
     category: 'Premium Residential Project',
     image: fallbackImage,

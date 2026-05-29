@@ -14,7 +14,7 @@ const ContactPreview = () => (
           <div className="mt-8 space-y-4 text-sm text-crown-beige/90">
             <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-3 text-white transition hover:text-crown-gold"><FaEnvelope /> Email: crownhomespaces@gmail.com</a>
             <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-white transition hover:text-crown-gold"><FaWhatsapp /> +91 95530 41347</a>
-            <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-white transition hover:text-crown-gold"><FaMapMarkerAlt /> Hyderabad, Telangana</a>
+            <a href="https://maps.google.com/?q=2ND FLOOR, BTR TOWER, My Home Mangala Rd, Prem Nagar, Kondapur, Hyderabad, Telangana 500049,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-white transition hover:text-crown-gold"><FaMapMarkerAlt /> Hyderabad, Telangana</a>
           </div>
         </div>
 

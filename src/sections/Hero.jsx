@@ -47,8 +47,8 @@ const Hero = () => (
           <div className="absolute right-6 bottom-6 h-24 w-24 rounded-full bg-white/10 blur-3xl" />
           <motion.img
             src={founderImage}
-            alt="Shaik Azaruddin Founder of Fighters Combat Academy Hyderabad"
-            title="Shaik Azaruddin Founder of Fighters Combat Academy Hyderabad"
+            alt="Shaik Azaruddin Founder of Fighters Combat Academy And Crown Home Spaces"
+            title="Shaik Azaruddin Founder of Fighters Combat Academy And Crown Home Spaces"
             loading="lazy"
             className="relative h-[520px] w-full rounded-[32px] object-cover shadow-[0_40px_120px_rgba(0,0,0,0.4)] transition duration-700 hover:scale-[1.01]"
             whileHover={{ scale: 1.02 }}

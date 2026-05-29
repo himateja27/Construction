@@ -9,7 +9,8 @@ const globsByFolder = {
   'Project 21 DR': import.meta.glob('../assets/images/projects/Project 21 DR/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
   'Phoenix Elysium': import.meta.glob('../assets/images/projects/Phoenix Elysium/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
   'Villa 7': import.meta.glob('../assets/images/projects/Villa 7/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
-  'Qudri Bungalow': import.meta.glob('../assets/images/projects/Qudri Bungalow/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' })
+  'Qudri Bungalow': import.meta.glob('../assets/images/projects/Qudri Bungalow/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
+  '# 18': import.meta.glob('../assets/images/projects/h 18/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }) // Avoid globbing folder with '#' in name
 };
 
 const ProjectDetail = () => {
