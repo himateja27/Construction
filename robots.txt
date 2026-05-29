@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://crownhomespaces.com/sitemap.xml
+Sitemap: https://agent-6a14a39b17600fd2fc555860--kbfi.netlify.app/sitemap.xml
 Host: https://crownhomespaces.com

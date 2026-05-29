@@ -22,7 +22,13 @@ const TeamSection = ({ featuredOnly = false }) => {
             <div className="flex gap-6">
               <div className="relative">
                 <div className="h-36 w-36 overflow-hidden rounded-2xl border border-crown-gold bg-crown-rich p-0">
-                  <img src={lead.image} alt={lead.name} className="h-full w-full object-cover" />
+                  {lead.image ? (
+                    <img src={lead.image} alt={lead.name} className="h-full w-full object-cover" />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-crown-dark text-center text-sm text-crown-beige/90">
+                      Team photo will be added here
+                    </div>
+                  )}
                 </div>
                 <div className="absolute -right-3 -top-3 rounded-full bg-crown-gold p-2 text-crown-dark shadow-glow">★</div>
               </div>
@@ -71,7 +77,13 @@ const TeamSection = ({ featuredOnly = false }) => {
               </div>
               <div className="relative z-10 flex items-center gap-4">
                 <div className="h-14 w-14 overflow-hidden rounded-md border border-white/10 bg-crown-rich">
-                  <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-[10px] text-crown-beige/80">
+                      Photo coming soon
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-white">{member.name}</p>

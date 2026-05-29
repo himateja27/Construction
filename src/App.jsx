@@ -1,8 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 import DefaultLayout from './layouts/DefaultLayout.jsx';
 import AppRoutes from './routes/AppRoutes.jsx';
-import ScrollToTop from './components/ScrollToTop.jsx';
 import { AnimatePresence, motion } from 'framer-motion';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<DefaultLayout />}>
+      {AppRoutes()}
+    </Route>
+  ),
+  {
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true
+    }
+  }
+);
 
 function App() {
   return (
@@ -15,12 +28,7 @@ function App() {
         transition={{ duration: 0.55, ease: 'easeOut' }}
         className="min-h-screen bg-crown-dark text-white"
       >
-        <ScrollToTop />
-        <Routes>
-          <Route path="/*" element={<DefaultLayout />}> 
-            {AppRoutes()}
-          </Route>
-        </Routes>
+        <RouterProvider router={router} />
       </motion.div>
     </AnimatePresence>
   );

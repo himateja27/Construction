@@ -7,6 +7,7 @@ import Testimonials from '../pages/Testimonials.jsx';
 import Careers from '../pages/Careers.jsx';
 import Contact from '../pages/Contact.jsx';
 import NotFound from '../pages/NotFound.jsx';
+import MasterAzhar from '../pages/MasterAzhar.jsx';
 
 const AppRoutes = () => [
   <Route key="home" index element={<Home />} />,
@@ -16,6 +17,8 @@ const AppRoutes = () => [
   <Route key="testimonials" path="testimonials" element={<Testimonials />} />,
   <Route key="careers" path="careers" element={<Careers />} />,
   <Route key="contact" path="contact" element={<Contact />} />,
+  <Route key="master" path="master-azhar" element={<MasterAzhar />} />,
+  <Route key="founder" path="founder" element={<MasterAzhar />} />,
   <Route key="notfound" path="*" element={<NotFound />} />
 ];
 

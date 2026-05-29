@@ -1,3 +1,12 @@
+const teamFiles = import.meta.glob('../assets/images/team/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url' });
+const teamImages = Object.fromEntries(
+  Object.entries(teamFiles).map(([path, value]) => {
+    const url = typeof value === 'string' ? value : value?.default || value?.url || '';
+    const fileName = path.split('/').pop();
+    return [fileName, url];
+  })
+);
+
 export const team = [
   {
     id: 'azaruddin',
@@ -19,8 +28,7 @@ export const team = [
     experience: '5+ Years',
     projects: '50+ Successful Projects',
     specialization: 'Luxury Homes & Commercial Infrastructure',
-    image:
-      'https://images.unsplash.com/photo-1603415526960-f7e0328c80d6?auto=format&fit=crop&w=800&q=80',
+    image: teamImages['azaruddin.jpg'] || '',
     socials: {
       linkedin: 'https://www.linkedin.com/',
       whatsapp: 'https://wa.me/919553041347',
@@ -37,7 +45,7 @@ export const team = [
     experience: '4+ Years',
     projects: '35+ Projects Completed',
     skills: ['Project Planning', 'Site Coordination', 'Construction Operations', 'Team Leadership'],
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
+    image: teamImages['ramesh.jpg'] || '',
     socials: {
       linkedin: 'https://www.linkedin.com/',
       whatsapp: 'https://wa.me/919553041347',
@@ -53,7 +61,7 @@ export const team = [
     experience: '3+ Years',
     projects: '40+ Interior Projects',
     skills: ['Luxury Interiors', 'Space Planning', 'Modern Design Concepts', 'Residential Styling'],
-    image: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80',
+    image: teamImages['kavya.jpg'] || '',
     socials: {
       linkedin: 'https://www.linkedin.com/',
       whatsapp: 'https://wa.me/918712217250',
@@ -69,7 +77,7 @@ export const team = [
     experience: '4+ Years',
     projects: '45+ Projects Managed',
     skills: ['Site Supervision', 'Quality Assurance', 'Workforce Management', 'Infrastructure Coordination'],
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80',
+    image: teamImages['sunil.jpg'] || '',
     socials: {
       linkedin: 'https://www.linkedin.com/',
       whatsapp: 'https://wa.me/919553041347',

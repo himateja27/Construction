@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Projects', path: '/projects' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Careers', path: '/careers' },
+  { label: 'Founder', path: '/master-azhar' },
   { label: 'Contact', path: '/contact' }
 ];
 

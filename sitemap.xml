@@ -28,4 +28,8 @@
     <loc>https://crownhomespaces.com/contact</loc>
     <priority>0.90</priority>
   </url>
+  <url>
+    <loc>https://crownhomespaces.com/master-azhar</loc>
+    <priority>0.85</priority>
+  </url>
 </urlset>
