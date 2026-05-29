@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO.jsx';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import image2 from "../assets/images/founder/image2.png";
 
 const Hero = ({ image }) => (
   <section className="relative flex min-h-screen items-center bg-gradient-to-b from-black/60 to-black/40">
@@ -26,8 +27,16 @@ const Hero = ({ image }) => (
       </div>
 
       <div className="mx-auto w-full max-w-sm flex-shrink-0 rounded-3xl border border-white/5 bg-white/5 p-2 backdrop-blur-md lg:ml-auto">
-        <motion.img src={image} alt="Shaik Azaruddin" loading="lazy" className="h-[320px] w-full rounded-2xl object-cover shadow-xl sm:h-96" initial={{ scale: 0.98 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
-      </div>
+  <motion.img
+  src={image2}
+  alt="Shaik Azaruddin"
+  loading="lazy"
+  className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[420px]"
+  initial={{ scale: 1.05 }}   // slight zoom
+  animate={{ scale: 1 }}      // settles to normal
+  transition={{ duration: 0.8 }}
+/>
+</div>
     </div>
   </section>
 );
