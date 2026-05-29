@@ -29,14 +29,14 @@ const Header = () => {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${sticky ? 'bg-crown-dark/95 backdrop-blur-xl shadow-xl' : 'bg-transparent'}`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link to="/" className="flex items-center gap-3 text-white">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-crown-gold bg-crown-rich text-lg font-semibold text-crown-gold shadow-glow">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-10">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 text-white flex-shrink-0">
+          <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-2xl border border-crown-gold bg-crown-rich text-xs sm:text-lg font-semibold text-crown-gold shadow-glow flex-shrink-0">
             CH
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-crown-beige">Crown Home Spaces</p>
-            <p className="text-sm text-crown-gold">Luxury Interiors & Construction</p>
+          <div className="hidden sm:block">
+            <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-crown-beige">Crown Home Spaces</p>
+            <p className="text-[10px] sm:text-sm text-crown-gold">Luxury Interiors</p>
           </div>
         </Link>
 
@@ -56,17 +56,17 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-5 py-3 text-sm text-crown-beige transition hover:border-white hover:text-white">
+        <div className="hidden items-center gap-2 lg:flex">
+          <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-4 py-2 text-xs sm:text-sm text-crown-beige transition hover:border-white hover:text-white">
             <FaWhatsapp /> WhatsApp
           </a>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-4 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm font-semibold text-crown-dark transition hover:bg-white">
             Get Quote
           </Link>
         </div>
 
-        <button onClick={() => setOpen((prev) => !prev)} className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-crown-gold text-crown-gold lg:hidden">
-          {open ? <FiX size={22} /> : <FiMenu size={22} />}
+        <button onClick={() => setOpen((prev) => !prev)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-crown-gold text-crown-gold transition hover:bg-crown-gold/10 lg:hidden">
+          {open ? <FiX size={20} /> : <FiMenu size={20} />}
         </button>
       </div>
 
@@ -84,23 +84,23 @@ const Header = () => {
       )}
 
       {open && (
-        <div className="absolute inset-x-0 top-full z-40 bg-crown-dark/95 px-6 pb-6 pt-5 shadow-2xl backdrop-blur-xl lg:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="absolute inset-x-0 top-full z-40 bg-crown-dark/95 px-4 pb-6 pt-4 shadow-2xl backdrop-blur-xl lg:hidden sm:px-6">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {navItems.map((item) => (
-              <NavLink key={item.label} to={item.path} onClick={() => setOpen(false)} className="text-lg uppercase tracking-[0.2em] text-crown-beige hover:text-white">
+              <NavLink key={item.label} to={item.path} onClick={() => setOpen(false)} className="text-sm sm:text-base uppercase tracking-[0.2em] text-crown-beige hover:text-white py-2">
                 {item.label}
               </NavLink>
             ))}
           </div>
-          <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-crown-beige">
-            <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
-              <FaWhatsapp /> +91 95530 41347
+          <div className="mt-4 flex flex-col gap-2 border-t border-white/10 pt-4 text-xs sm:text-sm text-crown-beige sm:gap-3 sm:pt-5">
+            <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 py-2 sm:py-1">
+              <FaWhatsapp className="flex-shrink-0" /> +91 95530 41347
             </a>
-            <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-2">
-              <FiMail /> Email Us
+            <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-2 py-2 sm:py-1">
+              <FiMail className="flex-shrink-0" /> Email Us
             </a>
-            <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
-              <FiMapPin /> Hyderabad
+            <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 py-2 sm:py-1">
+              <FiMapPin className="flex-shrink-0" /> Hyderabad
             </a>
           </div>
         </div>
