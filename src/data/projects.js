@@ -20,11 +20,11 @@ function choosePlaceholder(category) {
 
 export const projects = [
   {
-    title: 'RR Majil',
-    slug: 'rr-majil',
-    folder: 'RR Majil',
+    title: 'RR Manzil',
+    slug: 'rr-manzil',
+    folder: 'RR Manzil',
     category: 'Architectural Elevation',
-    image: findImageForFolder('RR Majil') || choosePlaceholder('Architectural Elevation'),
+    image: findImageForFolder('RR Manzil') || choosePlaceholder('Architectural Elevation'),
     description: 'A cinematic elevation project with sculpted façade geometry, gold detailing, and premium material layering.'
   },
   {
@@ -52,11 +52,11 @@ export const projects = [
     description: 'A villa facade concept with elegant proportions, layered textures, and premium landscape framing.'
   },
   {
-    title: 'Qudri Bungalow',
-    slug: 'qudri-bungalow',
-    folder: 'Qudri Bungalow',
+    title: 'Quadri Bungalow',
+    slug: 'quadri-bungalow',
+    folder: 'Quadri Bungalow',
     category: 'Residential Construction',
-    image: findImageForFolder('Qudri Bungalow') || choosePlaceholder('Residential Construction'),
+    image: findImageForFolder('Quadri Bungalow') || choosePlaceholder('Residential Construction'),
     description: 'A luxury residential construction project with curated interiors, robust delivery, and fine craftsmanship.'
   },
   {
