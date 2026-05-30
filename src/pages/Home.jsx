@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Hero from '../sections/Hero.jsx';
 import ServicesSection from '../sections/ServicesSection.jsx';
@@ -30,7 +31,7 @@ const Home = () => (
               <p className="max-w-2xl text-base leading-8 text-crown-beige/90 sm:text-lg">Shaik Azaruddin leads both Crown Home Spaces and Fighters Combat Academy with a vision focused on discipline, leadership, transformation, and premium excellence.</p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">Visit Fighters Combat Academy</a>
-                <a href="/master-azhar" className="inline-flex rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Explore Founder Journey</a>
+                <Link to="/master-azhar" className="inline-flex rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Explore Founder Journey</Link>
               </div>
             </div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1 }} className="relative mx-auto w-full overflow-hidden rounded-[36px] border border-crown-gold/20 bg-white/5 p-4 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
