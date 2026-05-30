@@ -22,7 +22,6 @@ const AppRoutes = () => [
   <Route key="careers" path="careers" element={<Careers />} />,
   <Route key="contact" path="contact" element={<Contact />} />,
   <Route key="master" path="master-azhar" element={<MasterAzhar />} />,
-  <Route key="founder" path="founder" element={<MasterAzhar />} />,
   <Route key="notfound" path="*" element={<NotFound />} />
 ];
 

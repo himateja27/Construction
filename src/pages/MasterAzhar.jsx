@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO.jsx';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { businessStreetAddress, businessLocality, businessRegion, businessCountry } from '../constants/location.js';
 import image2 from "../assets/images/founder/image2.png";
 
 const Hero = ({ image }) => (
@@ -27,16 +28,16 @@ const Hero = ({ image }) => (
       </div>
 
       <div className="mx-auto w-full max-w-sm flex-shrink-0 rounded-3xl border border-white/5 bg-white/5 p-2 backdrop-blur-md lg:ml-auto">
-  <motion.img
-  src={image2}
-  alt="Shaik Azaruddin"
-  loading="lazy"
-  className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[420px]"
-  initial={{ scale: 1.05 }}   // slight zoom
-  animate={{ scale: 1 }}      // settles to normal
-  transition={{ duration: 0.8 }}
-/>
-</div>
+        <motion.img
+          src={image2}
+          alt="Shaik Azaruddin"
+          loading="lazy"
+          className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[420px]"
+          initial={{ scale: 1.05 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+      </div>
     </div>
   </section>
 );
@@ -79,8 +80,8 @@ const Gallery = ({ images }) => {
       </div>
 
       {open && (
-        <div onClick={() => setOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6">
-          <img src={images[idx]} alt={`preview ${idx + 1}`} className="max-h-[90vh] max-w-full rounded-lg object-contain" />
+        <div onClick={() => setOpen(false)} className="fixed inset-0 z-70 flex items-center justify-center bg-black/80 p-6">
+          <img src={images[idx]} alt={`preview ${idx + 1}`} loading="eager" className="max-h-[90vh] max-w-full rounded-lg object-contain" />
         </div>
       )}
     </section>
@@ -179,10 +180,10 @@ const MasterAzhar = () => {
         email: 'crownhomespaces@gmail.com',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Hyderabad, Telangana',
-          addressLocality: 'Hyderabad',
-          addressRegion: 'Telangana',
-          addressCountry: 'India'
+          streetAddress: businessStreetAddress,
+          addressLocality: businessLocality,
+          addressRegion: businessRegion,
+          addressCountry: businessCountry
         },
         url: 'https://crownhomespaces.com',
         priceRange: '₹₹₹',

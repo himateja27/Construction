@@ -4,6 +4,7 @@ import { FiMenu, FiX, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { servicesMenu } from '../data/services.js';
+import { googleMapsUrl, businessStreetAddress } from '../constants/location.js';
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -119,8 +120,8 @@ const Header = () => {
             <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-2 py-2 sm:py-1">
               <FiMail className="flex-shrink-0" /> Email Us
             </a>
-            <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 py-2 sm:py-1">
-              <FiMapPin className="flex-shrink-0" /> Hyderabad
+            <a href={googleMapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 py-2 sm:py-1">
+              <FiMapPin className="flex-shrink-0" /> {businessStreetAddress}
             </a>
           </div>
         </div>

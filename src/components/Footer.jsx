@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { founderImage } from '../assets/images/founder/index.js';
+import { googleMapsUrl, businessStreetAddress } from '../constants/location.js';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -37,7 +38,7 @@ const Footer = () => (
           </div>
         </div>
         <p className="mt-4 max-w-md text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">
-          Delivering cinematic luxury interiors, turnkey project delivery, and premium architectural storytelling across Hyderabad and Telangana.
+          Delivering cinematic luxury interiors, turnkey project delivery, and premium architectural storytelling from {businessStreetAddress}.
         </p>
         <div className="mt-6 flex items-center gap-3 text-lg sm:text-2xl text-crown-gold">
           <a href="https://instagram.com/crownhomespaces" target="_blank" rel="noreferrer" aria-label="Instagram"> <FaInstagram /> </a>
@@ -45,7 +46,7 @@ const Footer = () => (
         </div>
         <div className="mt-6 flex items-center gap-4">
           <div className="flex items-center gap-3 rounded-2xl bg-white/5 p-2">
-            <img src={founderImage} alt="Shaik Azaruddin Founder" title="Work with Shaik Azaruddin" className="h-10 w-10 rounded-lg object-cover" />
+            <img src={founderImage} alt="Shaik Azaruddin Founder" title="Work with Shaik Azaruddin" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
             <div>
               <p className="text-sm font-semibold text-white">Work with Founder</p>
               <a href="/master-azhar" className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</a>
@@ -84,7 +85,7 @@ const Footer = () => (
           <a href="https://wa.me/919553041347" className="inline-flex items-center gap-2 transition hover:text-white"><FaWhatsapp /> +91 95530 41347</a>
           <a href="https://wa.me/918712217250" className="inline-flex items-center gap-2 transition hover:text-white"><FaWhatsapp /> +91 87122 17250</a>
           <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-2 transition hover:text-white"><FiMail /> crownhomespaces@gmail.com</a>
-          <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-white"><FiMapPin /> Hyderabad, Telangana</a>
+          <a href={googleMapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-white"><FiMapPin /> {businessStreetAddress}</a>
         </div>
       </div>
     </div>

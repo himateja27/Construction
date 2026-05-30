@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
 import SEO from '../components/SEO.jsx';
@@ -10,7 +10,7 @@ const globsByFolder = {
   'Phoenix Elysium': import.meta.glob('../assets/images/projects/Phoenix Elysium/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
   'Villa 7': import.meta.glob('../assets/images/projects/Villa 7/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
   'Qudri Bungalow': import.meta.glob('../assets/images/projects/Qudri Bungalow/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }),
-  '# 18': import.meta.glob('../assets/images/projects/h 18/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' }) // Avoid globbing folder with '#' in name
+  'h 18': import.meta.glob('../assets/images/projects/h 18/*.{png,jpg,jpeg,webp}', { eager: true, query: '?url' })
 };
 
 const ProjectDetail = () => {
@@ -39,6 +39,8 @@ const ProjectDetail = () => {
     );
   }
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <>
       <SEO title={`${project.title} | Crown Home Spaces`} description={project.description} image={project.image} />
@@ -56,10 +58,22 @@ const ProjectDetail = () => {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {(images.length > 0 ? images : [project.image]).map((src, i) => (
               <div key={i} className="overflow-hidden rounded-xl bg-[#0d0b09]">
-                <img src={src} alt={`${project.title} image ${i + 1}`} className="h-64 w-full object-cover" loading="lazy" />
+                <button type="button" onClick={() => setSelectedImage(src)} className="w-full h-full focus:outline-none">
+                  <img src={src} alt={`${project.title} image ${i + 1}`} className="h-64 w-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" />
+                </button>
               </div>
             ))}
           </div>
+
+          {/* Fullscreen image modal */}
+          {selectedImage && (
+            <div className="fixed inset-0 z-70 flex items-center justify-center bg-black/90 p-6" onClick={() => setSelectedImage(null)}>
+              <div className="relative mx-auto max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+                <button type="button" onClick={() => setSelectedImage(null)} aria-label="Close image" className="absolute right-2 top-2 z-80 pointer-events-auto rounded-full bg-black/60 p-3 text-white">Close</button>
+                <img src={selectedImage} alt="Project full preview" loading="eager" className="max-h-[90vh] w-full object-contain rounded-lg" />
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { businessStreetAddress, businessLocality, businessRegion, businessCountry, googleMapsUrl } from '../constants/location.js';
 
 const defaultMeta = {
-  title: 'Crown Home Spaces | Luxury Interiors & Turnkey Projects in Hyderabad',
+  title: 'Crown Home Spaces | Luxury Interiors & Turnkey Projects in Kondapur',
   description: `Crown Home Spaces is a premium luxury interiors and turnkey projects company based at ${businessStreetAddress}, delivering elite architecture, residential construction, and premium interior experiences.`,
   url: 'https://crownhomespaces.com',
   image: 'https://crownhomespaces.com/og-image.jpg',
@@ -84,7 +84,7 @@ const SEO = ({ title, description, url, image, keywords, children }) => {
         name: 'Crown Home Spaces',
         url: meta.url,
         description: meta.description,
-        areaServed: 'Hyderabad, Telangana, India'
+        areaServed: 'Kondapur, Hyderabad, India'
       },
       {
         '@type': 'BreadcrumbList',

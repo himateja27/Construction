@@ -3,7 +3,7 @@ import SEO from '../components/SEO.jsx';
 
 const Careers = () => (
   <>
-    <SEO title="Careers | Crown Home Spaces" description="Join Crown Home Spaces and contribute to luxury interior design, construction, and architectural projects in Hyderabad." />
+    <SEO title="Careers | Crown Home Spaces" description="Join Crown Home Spaces in Kondapur and contribute to luxury interior design, construction, and architectural projects across Hyderabad." />
     <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">

@@ -6,28 +6,30 @@ import { founderImage } from '../assets/images/founder/index.js';
 
 const About = () => (
   <>
-    <SEO title="About Us | Crown Home Spaces" description="Meet Crown Home Spaces, the Hyderabad-based leader in luxury interiors and turnkey project delivery across Kondapur, Gachibowli, Jubilee Hills, and Hitech City." />
+    <SEO title="About Us | Crown Home Spaces" description="Meet Crown Home Spaces, the Kondapur-based leader in luxury interiors and turnkey project delivery across Hyderabad and Telangana." />
     <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">About the firm</p>
-            <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">A heritage of premium interiors and turnkey delivery in Hyderabad.</h1>
+            <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">A heritage of premium interiors and turnkey delivery in Kondapur.</h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-crown-beige/90">
-              Crown Home Spaces is grounded in Hyderabad with a team of designers, creators, and delivery specialists who craft curated architecture, refined luxury interiors, and seamless turnkey execution.
+              Crown Home Spaces is grounded in Kondapur with a team of designers, creators, and delivery specialists who craft curated architecture, refined luxury interiors, and seamless turnkey execution.
             </p>
           </div>
           <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-black/40 p-4 shadow-glow">
-            <motion.img
-              src={founderImage}
-              alt="Shaik Azaruddin Crown Home Spaces Founder"
-              title="Shaik Azaruddin | Founder"
-              loading="lazy"
-              className="h-[420px] w-full rounded-[28px] object-cover shadow-[0_40px_100px_rgba(0,0,0,0.5)]"
-              initial={{ scale: 0.99 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.1, ease: 'easeOut' }}
-            />
+           <motion.img
+  src={founderImage}
+  alt="Shaik Azaruddin Crown Home Spaces Founder"
+  title="Shaik Azaruddin | Founder"
+  loading="lazy"
+  className="h-full w-full rounded-[28px] object-cover shadow-[0_40px_100px_rgba(0,0,0,0.5)]"
+  initial={{ scale: 0.99 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 1.1, ease: 'easeOut' }}
+/>
+
+
             <div className="pointer-events-none absolute left-6 top-6 rounded-lg border border-white/10 bg-gradient-to-r from-black/60 to-black/30 p-4">
               <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Our mission</p>
               <p className="mt-2 text-sm text-crown-beige/90">To build aspirational environments for clients looking for contemporary luxury, dependable execution, and sustainable long-term value.</p>

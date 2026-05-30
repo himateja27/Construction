@@ -30,7 +30,7 @@ const FeaturedProjects = () => (
           <SwiperSlide key={project.title}>
             <motion.article whileHover={{ scale: 1.01 }} className="group overflow-hidden rounded-2xl sm:rounded-[32px] border border-white/10 bg-gradient-to-br from-[#161113] via-[#1f1710] to-[#221a14] shadow-glow">
               <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden">
-                <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <span className="inline-flex rounded-full bg-crown-gold/15 px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-crown-gold">{project.category}</span>

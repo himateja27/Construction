@@ -23,7 +23,7 @@ const TeamSection = ({ featuredOnly = false }) => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <div className="relative flex-shrink-0">
                 <div className="h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-lg sm:rounded-2xl border border-crown-gold bg-crown-rich p-0 flex-shrink-0">
-                  <img src={lead.image || founderImage} alt={lead.name} className="h-full w-full object-cover" />
+                  <img src={lead.image || founderImage} alt={lead.name} loading="lazy" className="h-full w-full object-cover" />
                 </div>
                 <div className="absolute -right-3 -top-3 rounded-full bg-crown-gold p-2 text-crown-dark shadow-glow">★</div>
               </div>
@@ -73,7 +73,7 @@ const TeamSection = ({ featuredOnly = false }) => {
               <div className="relative z-10 flex items-start gap-3 sm:gap-4">
                 <div className="h-12 w-12 sm:h-14 sm:w-14 overflow-hidden rounded-md border border-white/10 bg-crown-rich flex-shrink-0">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
+                    <img src={member.image} alt={member.name} loading="lazy" className="h-full w-full object-cover" />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center text-[10px] text-crown-beige/80">
                       Photo coming soon
